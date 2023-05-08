@@ -1,0 +1,79 @@
+@import url('reset.css');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 300vh;
+}
+
+header {
+    font-size: 20px;
+    height: 100vh;
+    background: url('../assets/img/bg-header.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+header::after {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 160%;
+    padding: 10px;
+    z-index: 1;
+    flex-basis: 20%;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+    z-index: 1;
+    background-color: #8C0303;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* text-align: center;
+    line-height: 80px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .5s;
+}
+
+header a:hover {
+    background-color: #730202;
+}
+
+h2 {
+    font-size: 2.6rem;
+    text-align: center;
+    padding-top: 2rem;
+    color: #fff;
+    text-shadow: 0 0 20px black;
+}
+
+@media all and (min-width: 700px) {
+    header h1 {
+        font-size: 6rem;
+    }
+}
+
+@media all and (min-width: 2400px) {
+    header h1 {
+        font-size: 9rem;
+    }
+}
