@@ -1,4 +1,5 @@
 @use 'reset';
+@use 'variables' as *;
 
 html {
     font-size: 10px;
@@ -42,7 +43,7 @@ header a {
     color: inherit;
     text-decoration: none;
     z-index: 1;
-    background-color: #8C0303;
+    background-color: $bg-color;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -55,7 +56,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #730202;
+    background-color: $bg-hover-color;
 }
 
 h2 {

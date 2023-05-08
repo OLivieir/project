@@ -11,17 +11,18 @@
             <div class="logo">
                 <img src="logo.png" alt="Warsztat Samochodowy">
             </div>
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <ul class="menu">
                 <li><a href="#">Strona główna</a></li>
                 <li><a href="#">Usługi</a></li>
                 <li><a href="#">Cennik</a></li>
                 <li><a href="#">Kontakt</a></li>
             </ul>
-            <div class="burger-menu">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+
         </nav>
     </header>
 
@@ -73,14 +74,31 @@
     </footer>
 
     <script>
-        // script.js
-
 // Obsługa menu mobilnego
 const burgerMenu = document.querySelector('.burger-menu');
 const menu = document.querySelector('.menu');
 
 burgerMenu.addEventListener('click', () => {
     menu.classList.toggle('show');
+});
+
+// Scroll do sekcji na podstawie menu nawigacyjnego
+const navLinks = document.querySelectorAll('nav ul.menu li a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const targetSectionId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetSectionId);
+
+        window.scrollTo({
+            top: targetSection.offsetTop - 50,
+            behavior: 'smooth'
+        });
+
+        menu.classList.remove('show');
+    });
 });
 
 
