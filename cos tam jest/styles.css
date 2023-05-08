@@ -1,5 +1,4 @@
-       /* styles.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /* Resetowanie styli */
 * {
     margin: 0;
@@ -29,6 +28,13 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
+    font-size: 30px;
+}
+nav{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: 1s linear;
 }
 
 nav .logo img {
@@ -88,6 +94,10 @@ nav ul.menu li a:hover {
 .hero-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: magenta;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+
 }
 
 .hero-content p {
@@ -187,50 +197,6 @@ footer {
 footer p {
     font-size: 14px;
 }
-
-/* Media queries */
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    nav .logo img {
-        height: 40px;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 25px;
-        cursor: pointer;
-    }
-
-    .burger-menu .line {
-        width: 100%;
-        height: 3px;
-        background-color: #333;
-        margin-bottom: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .menu.show {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .menu.show li {
-        margin: 10px 0;
-    }
-}
-
     .hero-content {
         max-width: 100%;
         padding: 0 20px;
@@ -244,9 +210,51 @@ footer p {
     .hero-content p {
         font-size: 16px;
         margin-bottom: 20px;
+    
     }
 
     .service-item img {
         max-width: 100%;
+    }
+    @media all and (max-width: 800px) {
+        header {
+            padding: 10px;
+        }
+    
+        nav .logo img {
+            height: 40px;
+        }
+    
+        nav ul.menu {
+            display: none;
+        }
+    
+        .burger-menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+
+        }
+    
+        .burger-menu .line {
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            margin-bottom: 5px;
+        }
+    
+        .menu.show {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+    
+        .menu.show li {
+            margin: 10px 0;
+        }
     }
 

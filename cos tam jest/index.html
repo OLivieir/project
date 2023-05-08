@@ -37,17 +37,17 @@
         <div class="container">
             <h2 class="section-heading">Nasze usługi</h2>
             <div class="service-item">
-                <img src="service1.jpg" alt="Serwisowanie silnika">
+                <img src="#" alt="Serwisowanie silnika">
                 <h3>Serwisowanie silnika</h3>
                 <p>Profesjonalna naprawa i serwisowanie silników samochodowych.</p>
             </div>
             <div class="service-item">
-                <img src="service2.jpg" alt="Wymiana opon">
+                <img src="#" alt="Wymiana opon">
                 <h3>Wymiana opon</h3>
                 <p>Szybka i fachowa wymiana opon w sezonie letnim i zimowym.</p>
             </div>
             <div class="service-item">
-                <img src="service3.jpg" alt="Naprawa układu hamulcowego">
+                <img src="#" alt="Naprawa układu hamulcowego">
                 <h3>Naprawa układu hamulcowego</h3>
                 <p>Diagnoza, naprawa i konserwacja układu hamulcowego.</p>
             </div>
@@ -83,24 +83,6 @@ burgerMenu.addEventListener('click', () => {
     menu.classList.toggle('show');
 });
 
-// Scroll do sekcji na podstawie menu nawigacyjnego
-const navLinks = document.querySelectorAll('nav ul.menu li a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        const targetSectionId = link.getAttribute('href').substring(1);
-        const targetSection = document.getElementById(targetSectionId);
-
-        window.scrollTo({
-            top: targetSection.offsetTop - 50,
-            behavior: 'smooth'
-        });
-
-        menu.classList.remove('show');
-    });
-});
 
     </script>
 </body>
