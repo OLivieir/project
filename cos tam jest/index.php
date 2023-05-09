@@ -66,6 +66,30 @@
             </form>
         </div>
     </section>
+    <?php
+  $name = htmlspecialchars($_POST['first']);
+  $email = htmlspecialchars($_POST['email']);
+  $phone = htmlspecialchars($_POST['last']);
+  $message = htmlspecialchars($_POST['message']);
+
+  if(!empty($email) && !empty($message)){
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $receiver = "olivier.szel@gmail.com"; //enter that email address where you want to receive all messages
+      $subject = "From: $name <$email>";
+      $body = "Name: $name\nEmail: $email\nPhone: $phone\nMessage:\n$message\n\nRegards,\n$name";
+      $sender = "From: $email";
+      if(mail($receiver, $subject, $body, $sender)){
+         echo "Twoja wiadomość została wysłana...";
+      }else{
+         echo "Wystąpił błąd podczas wysyłki...";
+      }
+    }else{
+      echo "Wprowadź poprawny adres email";
+    }
+  }else{
+    echo "Pole email i wiadomość są wymagane";
+  }
+?>
 
     <footer>
         <div class="container">
